@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1261801503514515975, guid: d55f0073cf9edce41b07927884a50333, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1261801503514515975, guid: d55f0073cf9edce41b07927884a50333, type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,6 +303,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 755
       objectReference: {fileID: 0}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 477540198}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 477540198}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 477540198}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableTipLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: EnableTipLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TipController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TipController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5763569617489029556, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -341,6 +373,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+--- !u!114 &477540198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8551760201331523921, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
+  m_PrefabInstance: {fileID: 477540195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0469393ef9f8bed42ad12e65fe124ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &765702658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,7 +450,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2211405827369226892, guid: 5adfc9cce216be848a61c183e1bc918e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2211405827369226892, guid: 5adfc9cce216be848a61c183e1bc918e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,7 +531,7 @@ Transform:
   - {fileID: 1531184966}
   - {fileID: 1430258507}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1273624312
 PrefabInstance:
@@ -499,7 +542,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2211405827369226892, guid: 5adfc9cce216be848a61c183e1bc918e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2211405827369226892, guid: 5adfc9cce216be848a61c183e1bc918e, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,17 +17,11 @@ public class WinPanelCoinsHandler : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public async void EnablePanel()
+    public void EnablePanel()
     {
         gameObject.SetActive(true);
         GetComponent<AudioSource>().PlayOneShot(_winSound);
-        await Task.Delay(500);
-        for (int i = 0; i <= CoinSaver.coinsInLevelAmount - 1; i++)
-        {
-            await Task.Delay(500);
-            AddCoin(i);
-            Debug.Log(i);
-        }
+        StartCoroutine(EnableCoins());
         if (CoinSaver.coinsInLevelAmount == _maxCoinsInLevel)
             _allCoinsReachedParticle.Play();
     }
@@ -35,5 +30,16 @@ public class WinPanelCoinsHandler : MonoBehaviour
     {
         _reachedCoinParticle[coinIndex].SetActive(true);
         _coinImages[coinIndex].sprite = _reachedCoinSprite;
+    }
+
+    private IEnumerator EnableCoins()
+    {
+        yield return new WaitForSeconds(.5f);
+        for (int i = 0; i <= CoinSaver.coinsInLevelAmount - 1; i++)
+        {
+            yield return new WaitForSeconds(.5f);
+            AddCoin(i);
+            Debug.Log(i);
+        }
     }
 }

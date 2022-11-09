@@ -10,6 +10,7 @@ public class FinishHandler : MonoBehaviour
         {
             _finishParticle.Play();
             col.gameObject.GetComponent<CarEngineHandler>().DisableCarEngine();
+            col.gameObject.GetComponent<Collider2D>().enabled = false;
             FinishCounter.OnFinished();
             GetComponent<CapsuleCollider2D>().enabled = false;
             GetComponent<AudioSource>().PlayOneShot(_finishSound);

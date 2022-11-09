@@ -1575,7 +1575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1587,7 +1587,7 @@ PrefabInstance:
       objectReference: {fileID: 1978787772}
     - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: EnableTipLine
       objectReference: {fileID: 0}
     - target: {fileID: 5425675356299318839, guid: 9fa8aa73af39c414283fe5386046b37d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName

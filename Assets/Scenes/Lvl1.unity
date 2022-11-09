@@ -1155,6 +1155,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 1361064356407464577, guid: d55f0073cf9edce41b07927884a50333, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361064356435201342, guid: d55f0073cf9edce41b07927884a50333, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361064356823494437, guid: d55f0073cf9edce41b07927884a50333, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361064356828164250, guid: d55f0073cf9edce41b07927884a50333, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d55f0073cf9edce41b07927884a50333, type: 3}
 --- !u!1001 &6854386696846833034

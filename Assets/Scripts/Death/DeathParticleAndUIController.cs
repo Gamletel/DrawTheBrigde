@@ -16,11 +16,11 @@ public class DeathParticleAndUIController : MonoBehaviour
         DeathHandler.playerDeath -= PlayerDead;
     }
 
-    private async void PlayerDead(GameObject player)
+    private void PlayerDead(GameObject player)
     {
         _losePanel.SetActive(true);
         Instantiate(_deathParticle, player.transform.position, Quaternion.identity);
-        await Task.Delay(200);
+        player.GetComponent<Collider2D>().enabled = false;
         Destroy(player);
     }
 }

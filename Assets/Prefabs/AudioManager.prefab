@@ -174,6 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _as: {fileID: 4131741001552056333}
+  _backgroundAS: {fileID: 1384298950}
+  _al: {fileID: 0}
   _btnPressedClip: {fileID: 8300000, guid: f5d3e87a255e28b4d9108afe6469c603, type: 3}
   _engineStartedClip: {fileID: 8300000, guid: ab1c3c6a9c768cf41aee903b7b334425, type: 3}
 --- !u!82 &4131741001552056333

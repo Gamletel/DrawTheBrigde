@@ -1839,6 +1839,7 @@ Transform:
   - {fileID: 4225050335812650071}
   - {fileID: 5827687018124318332}
   - {fileID: 3121318974809217433}
+  - {fileID: 6056761939106318477}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2517,6 +2518,7 @@ GameObject:
   - component: {fileID: 5908827041043476986}
   - component: {fileID: 5425675356299318839}
   - component: {fileID: 9216638922528142143}
+  - component: {fileID: 8551760201331523921}
   m_Layer: 5
   m_Name: TipBtn
   m_TagString: Untagged
@@ -2626,22 +2628,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1738274854964234833}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3058127932346902899}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8551760201331523921}
+        m_TargetAssemblyTypeName: TipController, Assembly-CSharp
+        m_MethodName: EnableTipLine
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2669,6 +2659,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8551760201331523921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3058127932346902899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0469393ef9f8bed42ad12e65fe124ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tipLine: {fileID: 1738274854964234833}
 --- !u!1 &3900645804258615401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,9 +3169,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioListener, Assembly-CSharp
-        m_MethodName: OnBtnPressed
+      - m_Target: {fileID: 4225050335812650064}
+        m_TargetAssemblyTypeName: FinishCounter, Assembly-CSharp
+        m_MethodName: ResetFinishes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3178,9 +3181,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4225050335812650064}
-        m_TargetAssemblyTypeName: FinishCounter, Assembly-CSharp
-        m_MethodName: ResetFinishes
+      - m_Target: {fileID: 5345453949363787826}
+        m_TargetAssemblyTypeName: AudioListener, Assembly-CSharp
+        m_MethodName: OnBtnPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4040,6 +4043,50 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &8837150390450321901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6056761939106318477}
+  - component: {fileID: 6459817989328525684}
+  m_Layer: 0
+  m_Name: AudioManagerSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6056761939106318477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837150390450321901}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14974022, y: 0.8800423, z: 104.105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1588108290586682798}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6459817989328525684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837150390450321901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bf6d5f414f1d14daaad4f62c8bfd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioManager: {fileID: 4131741001552056332, guid: dc237272e6a20dd44b1b693a1cbc109b, type: 3}
 --- !u!1001 &863119818415908240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4097,14 +4144,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d9ffe99a751bb448b71f125f0843339, type: 3}
---- !u!198 &1588108290463627094 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2157350620966179526, guid: 6d9ffe99a751bb448b71f125f0843339, type: 3}
-  m_PrefabInstance: {fileID: 863119818415908240}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1588108290444099974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2157350620980421654, guid: 6d9ffe99a751bb448b71f125f0843339, type: 3}
+  m_PrefabInstance: {fileID: 863119818415908240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1588108290463627094 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2157350620966179526, guid: 6d9ffe99a751bb448b71f125f0843339, type: 3}
   m_PrefabInstance: {fileID: 863119818415908240}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1588108289642569939
@@ -4184,14 +4231,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb4dc6fc97576b540a5bf5bf4fd3e92b, type: 3}
---- !u!1 &8510249229962366938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6922140957501386505, guid: eb4dc6fc97576b540a5bf5bf4fd3e92b, type: 3}
-  m_PrefabInstance: {fileID: 1588108289642569939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8510249229962638326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6922140957501117221, guid: eb4dc6fc97576b540a5bf5bf4fd3e92b, type: 3}
+  m_PrefabInstance: {fileID: 1588108289642569939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8510249229962366938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6922140957501386505, guid: eb4dc6fc97576b540a5bf5bf4fd3e92b, type: 3}
   m_PrefabInstance: {fileID: 1588108289642569939}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1588108289839459476
@@ -4516,9 +4563,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff16f4720ddb17d4b8742b958e630047, type: 3}
---- !u!4 &256241096880261754 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5686551876795112526, guid: ff16f4720ddb17d4b8742b958e630047, type: 3}
+--- !u!1 &256241096880261756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686551876795112520, guid: ff16f4720ddb17d4b8742b958e630047, type: 3}
   m_PrefabInstance: {fileID: 5576838588568671796}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &256241096880261757 stripped
@@ -4532,9 +4579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcac804b0e8c78840a6fc1f2a1d717db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &256241096880261756 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5686551876795112520, guid: ff16f4720ddb17d4b8742b958e630047, type: 3}
+--- !u!4 &256241096880261754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5686551876795112526, guid: ff16f4720ddb17d4b8742b958e630047, type: 3}
   m_PrefabInstance: {fileID: 5576838588568671796}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6622689563728865947

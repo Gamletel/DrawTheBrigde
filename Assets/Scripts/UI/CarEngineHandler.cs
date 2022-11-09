@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -18,18 +19,11 @@ public class CarEngineHandler : MonoBehaviour
         StartCar.carStart -= EnableCarEngine;
     }
 
-    public async void EnableCarEngine()
+    public void EnableCarEngine()
     {
         engEnabled?.Invoke();
         AudioListener.OnEngineStarted();
-        await Task.Delay(500);
-
-        foreach (GameObject wheel in _wheels)
-        {
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            wheel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            wheel.GetComponent<WheelJoint2D>().useMotor = true; 
-        }       
+        StartCoroutine(EnableEngine());   
     }
 
     public void DisableCarEngine()
@@ -39,6 +33,17 @@ public class CarEngineHandler : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             wheel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             wheel.GetComponent<WheelJoint2D>().useMotor = false;
+        }
+    }
+
+    private IEnumerator EnableEngine()
+    {
+        yield return new WaitForSeconds(.5f);
+        foreach (GameObject wheel in _wheels)
+        {
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            wheel.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            wheel.GetComponent<WheelJoint2D>().useMotor = true;
         }
     }
 }
