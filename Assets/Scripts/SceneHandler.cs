@@ -9,6 +9,7 @@ public class SceneHandler : MonoBehaviour
         YandexSDK.instance.ShowInterstitial();
         FinishCounter.ResetFinishes();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     public void LoadNextLevel()
@@ -16,6 +17,7 @@ public class SceneHandler : MonoBehaviour
         YandexSDK.instance.ShowInterstitial();
         FinishCounter.ResetFinishes();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     public void LoadStartScene()
@@ -26,7 +28,6 @@ public class SceneHandler : MonoBehaviour
 
     public void SkipLevel()
     {
-        YandexSDK.instance.OnRewardedOpen(2);
         YandexSDK.instance.ShowRewarded("2");
         YandexSDK.instance.onRewardedAdReward += Instance_onRewardedAdReward;
     }
@@ -38,7 +39,7 @@ public class SceneHandler : MonoBehaviour
 
     private void Instance_onRewardedAdReward(string obj)
     {
-        if(obj == "2")
+        if (obj == "2")
         {
             FinishCounter.ResetFinishes();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AudioListener : MonoBehaviour
+public class AudioSounds : MonoBehaviour
 {
     public delegate void ButtonPressed();
     public static event ButtonPressed _btnPressed;

@@ -1,19 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public class Level1Tutorial : MonoBehaviour
 {
-    private Animator _animator;
-    private bool _firstStep;
+    private static Animator _animator;
+    public static bool firstStepEnter;
 
-    private void Start() => _animator = GetComponent<Animator>();
+    private void Awake() => _animator = GetComponent<Animator>();
 
-    private void Update()
+    public static void EndFirstStepTutorial()
     {
-        if (Input.GetMouseButtonUp(0) && !_firstStep)
-        {
-            _animator.SetInteger("tutorialIndex", 1);
-            _firstStep = true;
-        }
+        _animator.SetInteger("tutorialIndex", 1);
     }
 
     public void ExitTutorial()

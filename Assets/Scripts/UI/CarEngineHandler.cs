@@ -22,7 +22,7 @@ public class CarEngineHandler : MonoBehaviour
     public void EnableCarEngine()
     {
         engEnabled?.Invoke();
-        AudioListener.OnEngineStarted();
+        AudioSounds.OnEngineStarted();
         StartCoroutine(EnableEngine());   
     }
 
